@@ -3,8 +3,10 @@ import I18n from '../../utils/I18n';
 import {TouchableOpacity, View, Text} from 'react-native';
 import styles from './styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import AppContext from '../../context/AppContext';
 
 class MainFooterComponent extends React.Component {
+  static contextType = AppContext;
 
   props: {
     navigation: any;
@@ -27,8 +29,8 @@ class MainFooterComponent extends React.Component {
             style={styles.tab}
             onPress={this.props.navigation.navigate.bind(this, "MyPostScreen")}
           >
-            <Icon name="bars" style={[styles.icon, this.props.active == 'posts' ? styles.active : {}]} size={26} />
-            <Text style={[styles.icon, this.props.active == 'posts' ? styles.active : {}]}>{I18n.t("menu.posts")}</Text>
+            <Icon name="bars" style={[styles.icon, this.props.active == 'news' ? styles.active : {}]} size={26} />
+            <Text style={[styles.icon, this.props.active == 'news' ? styles.active : {}]}>{I18n.t("menu.news")}</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.tab}

@@ -6,7 +6,7 @@ class AppProvider extends React.Component {
 
   state = {
     userData: null,
-    lang: null,
+    lang: 'arm',
     country: null
   };
 

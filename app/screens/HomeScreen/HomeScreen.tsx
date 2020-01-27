@@ -47,7 +47,7 @@ class HomeScreen extends React.Component {
           <View style={styles.content}>
             <View style={styles.myAccount}>
               <Text style={styles.title}>
-                {I18n.t("myAccountScreen.myAccount")}
+                {I18n.t("homeScreen.myAccount")}
               </Text>
             </View>
             <View style={styles.setting}>
@@ -55,7 +55,7 @@ class HomeScreen extends React.Component {
                 onPress={() => this.props.navigation.navigate("SettingsScreen")}
                 style={styles.settings}
               >
-                {I18n.t("myAccountScreen.settings")}
+                {I18n.t("homeScreen.settings")}
               </Text>
               <Text
                 onPress={() =>
@@ -63,38 +63,35 @@ class HomeScreen extends React.Component {
                 }
                 style={styles.settings}
               >
-                {I18n.t("myAccountScreen.country")}
+                {I18n.t("homeScreen.country")}
               </Text>
               <View style={styles.languageChange}>
                 <View>
                   <Text style={styles.langTitle}>
-                    {I18n.t("myAccountScreen.language")}
+                    {I18n.t("homeScreen.language")}
                   </Text>
                 </View>
                 <View>
                   {/*<LangSliderComponent languageChange={this._handleLangChange.bind(this)}></LangSliderComponent>*/}
                 </View>
               </View>
-              <Text style={styles.settings}>
-                {I18n.t("myAccountScreen.termsAndConditions")}
-              </Text>
               <Text
                 onPress={() =>
                   this.props.navigation.navigate("AboutUsScreen")
                 }
                 style={styles.settings}
               >
-                {I18n.t("myAccountScreen.aboutUs")}
+                {I18n.t("homeScreen.aboutUs")}
               </Text>
               <Text style={styles.settings}>
-                {I18n.t("myAccountScreen.contactUs")}
+                {I18n.t("homeScreen.contactUs")}
               </Text>
               {this.context.userData ? (
                 <TouchableOpacity
                   onPress={() => this._handleLogout()}
                 >
                   <Text style={styles.settings}>
-                    {I18n.t("myAccountScreen.logout")}
+                    {I18n.t("homeScreen.logout")}
                   </Text>
                 </TouchableOpacity>
               ) : (
@@ -102,7 +99,7 @@ class HomeScreen extends React.Component {
                   onPress={() => this.props.navigation.navigate("LoginScreen")}
                 >
                   <Text style={styles.settings}>
-                    {I18n.t("myAccountScreen.login")}
+                    {I18n.t("homeScreen.login")}
                   </Text>
                 </TouchableOpacity>
               )}
